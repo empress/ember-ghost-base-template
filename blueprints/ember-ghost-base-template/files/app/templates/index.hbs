@@ -1,0 +1,25 @@
+<div class="wrapper">
+  <h2> Index Page </h2>
+  <p class="docs">
+    <em>model</em> is an array of all posts
+
+    <h3>first model:</h3>
+    {{object-docs obj=model.firstObject}}
+
+    <h3>number of models</h3>
+    <ul class="object-doc">
+      <li>
+        Value: {{model.length}}
+      </li>
+    </ul>
+
+    <h3>links to each model</h3>
+    <ul class="object-doc">
+      {{#each model as |post|}}
+        <li>
+          {{#link-to "post" post.id}}{{post.title}}{{/link-to}}
+        </li>
+      {{/each}}
+    </ul>
+  </p>
+</div>

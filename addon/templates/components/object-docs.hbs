@@ -1,0 +1,7 @@
+<ul class="object-doc">
+  {{#each keys as |key|}}
+    <li>
+      Key: {{key}}, Value: {{get obj key}}, Type: {{typeof (get obj key)}}
+    </li>
+  {{/each}}
+</ul>

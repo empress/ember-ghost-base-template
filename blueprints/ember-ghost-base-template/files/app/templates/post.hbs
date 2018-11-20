@@ -1,0 +1,31 @@
+<div class="wrapper">
+  <h2> Post Page </h2>
+  <p class="docs">
+    <em>model</em> is a hash of <em>post</em> which is the current post and <em>posts</em> which is all posts
+
+    <h3>post:</h3>
+    {{object-docs obj=model.post}}
+
+    <h3>accessing the author</h3>
+    you can access the author by accessing <em>model.post.author</em>
+    {{object-docs obj=model.post.author}}
+
+    <h3>link to the author</h3>
+    <ul class="object-doc">
+
+      <li>
+        {{#link-to "author" model.post.author.id}}{{model.post.author.name}}{{/link-to}}
+      </li>
+
+    </ul>
+
+    <h3>link to the tags</h3>
+    <ul class="object-doc">
+      {{#each model.post.tags as |tag|}}
+        <li>
+          {{#link-to "tag" tag}}{{tag}}{{/link-to}}
+        </li>
+      {{/each}}
+    </ul>
+  </p>
+</div>

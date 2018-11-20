@@ -1,0 +1,76 @@
+{{!-- You must leave this here --}}
+{{head-layout}}
+
+<div class="wrapper">
+  <h2> Application Template </h2>
+
+  <p class="docs">
+    You have access to the <em>blog</em> service and a <em>now</em> attbute
+
+    <h3>blog</h3>
+    {{object-docs obj=blog}}
+
+    <h3>now</h3>
+    <ul class="object-doc">
+      <li>
+        Value: {{now}}, Type: {{typeof now}}
+      </li>
+    </ul>
+
+    <h3>first navigation object:</h3>
+
+    <ul class="object-doc">
+      {{#each-in (get blog.navigation 0) as |key value|}}
+        <li>
+          Key: {{key}}, Value: {{value}}, Type: {{typeof value}}
+        </li>
+      {{/each-in}}
+    </ul>
+
+    <h3>link to each navigation:</h3>
+
+    <ul class="object-doc">
+      {{#each blog.navigation as |navigation|}}
+        <li class="nav-{{navigation.label}}">
+          {{#if navigation.id}}
+            {{#link-to navigation.route navigation.id}} {{navigation.label}} {{/link-to}}
+          {{else if navigation.route}}
+            {{#link-to navigation.route}} {{navigation.label}} {{/link-to}}
+          {{else if navigation.link}}
+            <a href={{navigation.link}}> {{navigation.label}} </a>
+          {{/if}}
+        </li>
+      {{/each}}
+    </ul>
+
+  </p>
+
+
+  {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+  {{outlet}}
+
+  {{!-- The footer at the very bottom of the screen --}}
+  <footer class="site-footer">
+    <section class="copyright"><a href={{blog.url}}>{{blog.title}}</a> &copy; {{moment-format now "YYYY"}}</section>
+    <nav class="site-footer-nav">
+      {{#link-to "index"}}Latest Posts{{/link-to}}
+      {{#if blog.facebook}}
+        <a
+          href="https://www.facebook.com/{{blog.facebook}}"
+          target="_blank"
+          rel="noopener"
+        >
+          Facebook
+        </a>
+      {{/if}}
+      {{#if blog.twitter}}<a href="https://twitter.com/{{blog.twitter}}" target="_blank" rel="noopener">Twitter</a>{{/if}}
+      <a
+        href="https://github.com/empress/ember-ghost"
+        target="_blank"
+        rel="noopener"
+      >
+        Built With Ember Ghost
+      </a>
+    </nav>
+  </footer>
+</div>

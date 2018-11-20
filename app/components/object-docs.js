@@ -1,0 +1,1 @@
+export { default } from 'ember-ghost-base-template/components/object-docs';

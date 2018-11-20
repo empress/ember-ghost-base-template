@@ -1,0 +1,22 @@
+<div class="wrapper">
+  <h2> Tag Page </h2>
+  <p class="docs">
+    <em>model</em> is a hash of <em>tag</em> which is the current tag and <em>posts</em> which is all posts in the current tag
+
+    <h3>tag</h3>
+    <ul class="object-doc">
+      <li>
+        Tag: {{model.tag}}
+      </li>
+    </ul>
+
+    <h3>posts</h3>
+    <ul class="object-doc">
+      {{#each model.posts as |post|}}
+        <li>
+          {{#link-to "post" post.id}}{{post.title}}{{/link-to}}
+        </li>
+      {{/each}}
+    </ul>
+  </p>
+</div>
