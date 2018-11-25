@@ -8,9 +8,9 @@ module.exports = {
   afterInstall() {
     return this.addAddonsToProject({
       packages: [
-        'ember-ghost',
         'ember-composable-helpers',
-        'ember-data'
+        'ember-data',
+        'ember-fetch',
       ]
     })
   }
