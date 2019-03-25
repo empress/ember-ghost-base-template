@@ -1,6 +1,6 @@
 /* eslint-env node */
 module.exports = {
-  description: 'The default template for ember-ghost-base-template. Used as a starting point to create your own template',
+  description: 'The default template for empress-blog-base-template. Used as a starting point to create your own template',
   normalizeEntityName() {
     // no-op
   },

@@ -1,7 +1,7 @@
 {
-  "name": "ember-ghost-base-template",
+  "name": "empress-blog-base-template",
   "version": "0.1.1",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "This base template for empress-blog is used to create example templates automatically with a blueprint",
   "keywords": [
     "ember-addon"
   ],

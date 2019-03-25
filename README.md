@@ -1,4 +1,4 @@
-ember-ghost-base-template
+empress-blog-base-template
 ==============================================================================
 
 [Short description of the addon.]
@@ -7,7 +7,7 @@ Installation
 ------------------------------------------------------------------------------
 
 ```
-ember install ember-ghost-base-template
+ember install empress-blog-base-template
 ```
 
 
@@ -23,7 +23,7 @@ Contributing
 ### Installation
 
 * `git clone <repository-url>`
-* `cd ember-ghost-base-template`
+* `cd empress-blog-base-template`
 * `npm install`
 
 ### Linting

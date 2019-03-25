@@ -1,1 +1,1 @@
-export { default } from 'ember-ghost-base-template/components/object-docs';
+export { default } from 'empress-blog-base-template/components/object-docs';
