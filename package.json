@@ -1,6 +1,6 @@
 {
   "name": "empress-blog-base-template",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "This base template for empress-blog is used to create example templates automatically with a blueprint",
   "keywords": [
     "ember-addon"
